@@ -164,7 +164,7 @@ void MentorESP8266HTTP::get(String serviceName, String deviceName) {
     _getSuccess = false;
     jsonGetString = "";
     // Load root certificate in DER format into WiFiClientSecure object
-    bool res = client.setCACert_P(caCert, caCertLen);
+    bool res = client.setCACert_P(certMentor_cer, certMentor_cer_len);
 
     if (!res) {
         printDebug("[MENTOR] Failed to load root CA certificate!\n");
@@ -235,7 +235,7 @@ String MentorESP8266HTTP::getRaw(String serviceName, String deviceName) {
     _getSuccess = false;
     jsonGetString = "";
     // Load root certificate in DER format into WiFiClientSecure object
-    bool res = client.setCACert_P(caCert, caCertLen);
+    bool res = client.setCACert_P(certMentor_cer, certMentor_cer_len);
 
     if (!res) {
         printDebug("[MENTOR] Failed to load root CA certificate!\n");
@@ -398,7 +398,7 @@ void MentorESP8266HTTP::getNonSecure(String serviceName, String deviceName) {
 void MentorESP8266HTTP::send(String serviceName, String deviceName) {
     WiFiClientSecure client;
     // Load root certificate in DER format into WiFiClientSecure object
-    bool res = client.setCACert_P(caCert, caCertLen);
+    bool res = client.setCACert_P(certMentor_cer, certMentor_cer_len);
 
     if (!res) {
         printDebug("[MENTOR] Failed to load root CA certificate!\n");
@@ -472,7 +472,7 @@ void MentorESP8266HTTP::send(String serviceName, String deviceName) {
 void MentorESP8266HTTP::sendRaw(String text, String serviceName, String deviceName) {
     WiFiClientSecure client;
     // Load root certificate in DER format into WiFiClientSecure object
-    bool res = client.setCACert_P(caCert, caCertLen);
+    bool res = client.setCACert_P(certMentor_cer, certMentor_cer_len);
 
     if (!res) {
         printDebug("[MENTOR] Failed to load root CA certificate!\n");
