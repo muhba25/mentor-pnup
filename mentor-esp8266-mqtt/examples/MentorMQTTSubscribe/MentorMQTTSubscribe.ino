@@ -1,18 +1,14 @@
 /*
-    This is an example sketch to subscribe to MQTT data on ESP8266
-    via the Mentor IoT Platform.
-
     MQTT server & port:
-    platform.mentor.id, port 1338
-
+    118.98.121.229, port 32575
+    
     MQTT topic:
-    /oneM2M/req/your-access-key/mentor-cse/json
-
-    The main function in this sketch is the callback function,
-    which will be fired every time a new message is published
-    to the topic.
-
-    For more information, please visit https://mentor.id/id/docs.html
+    /mentor/your-access-key/serviceName/deviceName
+    
+    This sketch will deploy data to your Mentor device
+    and publish to the MQTT topic simultaneously.
+    
+    For more information, please visit https://mentor.poliupg.ac.id/documentation.html
 */
 
 #include <MentorESP8266MQTT.h>
