@@ -9,7 +9,7 @@
 class MentorESP8266MQTT {
 
 private:
-    const char* _mqttServer = "182.23.83.29";
+    const char* _mqttServer = "118.98.121.229";
     const int _mqttPort = 32575;
     const int _secureMqttPort = 32575;
     bool _debug;
