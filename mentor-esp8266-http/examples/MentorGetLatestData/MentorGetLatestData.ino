@@ -41,7 +41,7 @@ void loop() {
     Uncomment the line below to use HTTP instead of HTTPS.
     Will be faster, but less secure
   */
-  // mentor.getNonSecure(projectName, deviceName);
+  // mentor.getNonSecure(serviceName, deviceName);
 
  //  Check if we're actually getting data
  if(mentor.getSuccess()) {
